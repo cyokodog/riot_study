@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>babel+es6で書いてみる</title>
+    <!-- プリコンパイルしてるのでriot.jsのみの読み込みでOK -->
+    <!--<script src="https://cdn.jsdelivr.net/riot/2.4/riot+compiler.min.js"></script>-->
+    <script src="//cdn.jsdelivr.net/riot/2.4/riot.min.js"></script>
+  </head>
+  <body>
+    <h1>babel+es6で書いてみる</h1>
+    <es6test></es6test>
+    <!-- babelでプリコンパイルしたjsファイルを読む -->
+    <script src="es6test.js"></script>
+    <script>
+    riot.mount('*');
+    </script>
+  </body>
+</html>

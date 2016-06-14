@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>お手軽ルーター</title>
+    <style>
+      body{
+        margin: 0 16px;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/riot/2.4/riot+compiler.min.js"></script>
+  </head>
+  <body>
+    <app></app>
+    <script type="riot/tag">
+      <app title="hoge">
+        <style scoped>
+        ul{
+          margin: 0 -16px;
+          background-color: #000;
+        }
+        li{
+          padding: 8px 16px;
+          list-style: none;
+          display: inline-block;
+        }
+        a:visited,
+        a{
+          color: #fff;
+        }
+        </style>
+        <ul>
+          <li><a href='#home'>home</a></li>
+          <li><a href='#blog'>blog</a></li>
+          <li><a href='#contact'>contact</a></li>
+        </ul>
+        <content></content>
+        riot.route(function(tagName) {
+          tagName = tagName || 'home';
+          riot.mount('content', tagName);
+        });
+        riot.route.start(true);
+      </app>
+
+      <home>
+        <h2>Home</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+      </home>
+      <blog>
+        <h2>blog</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+      </blog>
+      <contact>
+        <h2>contact</h2>
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. </p>
+      </contact>
+    </script>
+    <script>
+      riot.mount('*')
+    </script>
+  </body>
+</html>

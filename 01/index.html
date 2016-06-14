@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>一番かんたんなRiot.js</title>
+    <!-- include riot.js -->
+    <script src="https://cdn.jsdelivr.net/riot/2.4/riot+compiler.min.js"></script>
+  </head>
+  <body>
+    <h1>一番かんたんなRiot.js</h1>
+    <!-- place the custom tag anywhere inside the body -->
+    <sample></sample>
+    <!-- include the tag -->
+    <script type="riot/tag" src="sample.tag"></script>
+
+    <!-- mount the tag -->
+    <script>
+    riot.mount('sample', {
+      who: 'Riot'
+    })
+    </script>
+  </body>
+</html>
